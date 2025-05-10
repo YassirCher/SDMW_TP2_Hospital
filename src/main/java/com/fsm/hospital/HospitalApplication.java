@@ -33,7 +33,7 @@ public class HospitalApplication {
 						Patient patient = new Patient();
 						patient.setNom(name);
 						patient.setDateNaissance(new Date());
-						patient.setMalade(false); // Ajout recommandé
+						patient.setMalade(false);
 						hospitalService.savePatient(patient);
 					});
 			Stream.of("Yassmine", "Amin", "Nour")

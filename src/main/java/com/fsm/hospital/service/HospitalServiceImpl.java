@@ -9,8 +9,12 @@ import com.fsm.hospital.repositories.MedecinRepository;
 import com.fsm.hospital.repositories.PatientRepository;
 import com.fsm.hospital.repositories.RendezVousRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -51,4 +55,34 @@ public class HospitalServiceImpl implements IHospitalService {
     public Consultation saveConsultation(Consultation consultation) {
         return consultationRepository.save(consultation);
     }
+
+    @Override
+    public List<Patient> getAllPatients() {
+        return patientRepository.findAll();
+    }
+
+    @Override
+    public Optional<Patient> getPatientById(Long id) {
+        return patientRepository.findById(id);
+    }
+
+    @Override
+    public Patient findByNom(String nom) {
+        return  patientRepository.findByNom(nom);
+    }
+
+    @Override
+    public Patient updatePatient(Patient p) {
+        return patientRepository.save(p);
+    }
+
+    @Override
+    public void deletePatient(Long id) {
+        if (!patientRepository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Patient non trouvé");
+        }
+        patientRepository.deleteById(id);
+    }
+
+
 }

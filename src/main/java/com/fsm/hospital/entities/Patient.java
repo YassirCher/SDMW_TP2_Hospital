@@ -19,4 +19,6 @@ public class Patient {
     @OneToMany(mappedBy = "patient",fetch=FetchType.LAZY)
     private Collection<RendezVous> rendezVous;
 
+    private int score ;
+
 }
