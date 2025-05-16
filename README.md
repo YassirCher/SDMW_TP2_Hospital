@@ -9,7 +9,7 @@ Ce projet a consisté à développer un système de gestion hospitalière permet
 * Gestion des **dossiers patients** (création, mise à jour, consultation, suppression)
 * Administration des **profils médecins**
 * Planification et suivi des **rendez‑vous**
-* Interface web responsive basée sur Thymeleaf
+* Interface web responsive basée sur swagger
 * Persistance avec une base de données relationnelle (H2/MySQL) via Spring Data JPA
 
 Les résultats obtenus démontrent la robustesse de l’architecture et la facilité d’évolution du projet en vue d’y intégrer de nouvelles entités (ex. facturation, services, salles).
@@ -29,9 +29,9 @@ Les résultats obtenus démontrent la robustesse de l’architecture et la facil
 
 ### 2.1. Modélisation du domaine
 
-* **Patient** : id, nom,  date de naissance, score 
-* **Médecin** : id, nom, spécialité, email
-* **Rendez‑vous** : id, date/heure, patient, médecin, statut
+* **Patient** : id, nom,  date de naissance, score ...
+* **Médecin** : id, nom, spécialité, email ...
+* **Rendez‑vous** : id, date/heure, patient, médecin, statut ...
 
 
 
@@ -39,7 +39,7 @@ Les résultats obtenus démontrent la robustesse de l’architecture et la facil
 
 * **Couche Modèle** : entités JPA annotées, repository Spring Data
 * **Couche Contrôleur** : controllers Spring MVC/REST exposant les endpoints
-* **Couche Vue** : pages Thymeleaf pour l’affichage et la saisie
+* **Couche Vue** : swagger l’affichage et la saisie
 * **Couche Service**  : logique métier de traitement et validation
 
 ---
@@ -60,9 +60,6 @@ Les résultats obtenus démontrent la robustesse de l’architecture et la facil
 
 ### 3.3. Extraits de code clés
 ![image](https://github.com/user-attachments/assets/7ff10d7a-0e70-467b-bc46-e53933ee3cec)
-
-
-
 
 
 ## 4. Tests et validation
