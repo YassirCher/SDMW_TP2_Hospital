@@ -55,8 +55,6 @@ Les résultats obtenus démontrent la robustesse de l’architecture et la facil
 * Initialisation du schéma JPA 
 
 ### 3.3. Extraits de code clés
-
-java
 ![image](https://github.com/user-attachments/assets/7ff10d7a-0e70-467b-bc46-e53933ee3cec)
 
 
