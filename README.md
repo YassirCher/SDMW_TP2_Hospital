@@ -1,3 +1,6 @@
+Vous trouverez ici les deux simulations des IDS, intégrées ci-dessous avec leurs liens respectifs.
+video jpa : https://github.com/YassirCher/TP2-Simulation-jpa  
+video Students : 
 ## Résumé exécutif
 
 Ce projet a consisté à développer un système de gestion hospitalière permettant d’administrer les informations de patients, médecins et rendez‑vous de façon centralisée. L’application, réalisée en Java avec Maven, suit une architecture MVC (Modèle–Vue–Contrôleur) et utilise Spring Boot pour faciliter le déploiement. Les fonctionnalités clés comprennent :
